@@ -22,7 +22,12 @@ public class FirstActivity extends BaseSplitActivity {
                 aTest.aTest.aString = "aString";
                 Intent intent = new Intent();
                 intent.setData(Uri.parse("meli://second"));
+
                 intent.putExtra("key", aTest);
+
+                /*Bundle bundle = new Bundle();
+                bundle.putParcelable("key", aTest);
+                intent.putExtra("key", bundle);*/
                 FirstActivity.this.startActivity(intent);
             }
         }, 1000);
